@@ -6,18 +6,20 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Help</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-    <header>
-       <ul>
-           <li> <a href="/">Home</a></li>
-           <li> <a href="/about.html">About</a></li>
-       </ul>
-    </header>
-    <main>
-        <h1>Help</h1>
-    </main>
+<header>
+    <ul>
+        <li> <a href="/">Home</a></li>
+        <li> <a href="/about">About</a></li>
+    </ul>
+</header>
+<main>
+    <h1>{{ title }}</h1>
+    <p>{{ helpText }}</p>
+    <p>Created by {{ name }}</p>
+</main>
 
 </body>
 </html>
