@@ -49,9 +49,23 @@ app.get('/weather', (req, res) => {
   })
 })
 
-// app.com
-// app.com/help
-// app.com/about
+app.get('/help/*', (req, res) => {
+  res.render( '404',{
+    name: 'Pavel Koryakin',
+    date: new Date().getFullYear().toString(),
+    title: '404',
+    errorMessage: 'Unfortunately, article not found'
+  })
+})
+
+app.get('*', (req, res) => {
+  res.render('404',{
+    name: 'Pavel Koryakin',
+    date: new Date().getFullYear().toString(),
+    title: '404',
+    errorMessage: 'Unfortunately, page not found'
+  })
+})
 
 app.listen(3000, () => {
   console.log('Server is up on port 3000...')
