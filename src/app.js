@@ -19,7 +19,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
   res.render('index', {
-    title: 'Weather App',
+    title: 'Weather',
     name: 'Pavel Koryakin',
     date: new Date().getFullYear().toString()
   })
