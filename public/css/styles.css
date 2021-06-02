@@ -17,17 +17,9 @@ body {
     height: 100px;
     padding: 0 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background-color: #0984e3;
-}
-
-.header__logo {
-    width: 80px;
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-decoration: none;
 }
 
 .header ul {
@@ -40,20 +32,26 @@ body {
 }
 
 .header li {
-    transition: transform 0.2s linear;
+    transition: all 0.2s linear;
+    cursor: pointer;
 }
 
-.header li:hover,
-.header li:active {
-    transform: scale(1.1);
+.header li:hover {
+    transform: translateY(-2px);
 }
 
 .header li a {
-    color: #ffffff;
+    padding: 0.5rem 0;
+    color: #74b9ff;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.header li a:hover {
+    color: #ffffff;
 }
 
 main {
@@ -72,7 +70,17 @@ main h1 {
     text-align: center;
 }
 
+.weather__subtitles {
+    margin-bottom: 30px;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+.help__content {
+    margin-bottom: 20px;
+}
 
 .portrait {
     display: block;
@@ -81,22 +89,66 @@ main h1 {
 }
 
 .footer {
-    height: 150px;
+    height: 100px;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #ffffff;
+    align-items: center;
+    color: #74b9ff;
     background-color: #0984e3;
 }
 
 .footer p {
-    margin-bottom: 10px;
     text-align: center;
+    line-height: 1.5;
     letter-spacing: 2px;
 }
 
 .page404 {
     font-size: 25px;
     text-align: center;
+}
+
+#weather-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.weather__input {
+    flex-grow: 1;
+    margin-right: 5px;
+    padding: 7px 12px;
+    border: 1px solid #b2bec3;
+    border-radius: 3px;
+}
+
+.weather__button {
+    padding: 6px 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid #0984e3;
+    border-radius: 3px;
+    background-color: #0984e3;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.weather__button:hover {
+    color: #0984e3;
+    background-color: #ffffff;
+}
+
+.weather__button:active {
+    transform: scale(0.97);
+}
+
+.weather__message-one {
+    margin-bottom: 10px;
+}
+
+.weather__message-two {
+    line-height: 1.5;
 }
