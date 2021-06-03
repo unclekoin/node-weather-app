@@ -85,7 +85,13 @@ main h1 {
 .portrait {
     display: block;
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+}
+
+.about__content {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 .footer {
