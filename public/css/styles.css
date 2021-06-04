@@ -78,6 +78,15 @@ main h1 {
     text-align: center;
 }
 
+.weather__content {
+    display: flex;
+    align-items: center;
+}
+
+.weather__icon {
+    margin-right: 15px;
+}
+
 .help__content {
     margin-bottom: 20px;
 }

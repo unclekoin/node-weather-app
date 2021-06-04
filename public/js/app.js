@@ -1,4 +1,5 @@
 const content = document.getElementById('content');
+const icon = content.querySelector('.weather__icon')
 
 const weatherForm = document.getElementById('weather-form');
 const weatherInput = document.getElementById('weather-input');
@@ -19,6 +20,7 @@ weatherForm.addEventListener('submit', (event) => {
         if (data.error) {
           messageOne.textContent = data.error;
         } else {
+          icon.innerHTML = `<img src="${data.icon}" alt="">`
           messageOne.textContent = data.location;
           messageTwo.textContent = data.forecast;
         }
